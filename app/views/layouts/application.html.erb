@@ -19,12 +19,12 @@
          <button type="button" class="close" data-dismiss="alert">&times;</button>
          <%= flash[:notice] %>
        </div>
-     <% elsif flash[:alert] %>
+    <% elsif flash[:alert] %>
        <div class="alert alert-warning">
          <button type="button" class="close" data-dismiss="alert">&times;</button>
          <%= flash[:alert] %>
        </div>
-     <% end %>
+    <% end %>
 
     <%= yield %>
   </div>
