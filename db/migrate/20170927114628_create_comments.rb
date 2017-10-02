@@ -8,3 +8,6 @@ class CreateComments < ActiveRecord::Migration
     end
   end
 end
+
+# puts "-----------"
+# p Comment.first
