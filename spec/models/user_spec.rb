@@ -4,6 +4,7 @@ RSpec.describe User, type: :model do
   let(:user) { User.create!(name: "Bloccit User", email: "user@bloccit.com", password:"password") }
 
   it { is_expected.to have_many(:posts) }
+  it { is_expected.to have_many(:comments) }
 
   # Name
   it { is_expected.to validate_presence_of(:name) }
@@ -19,6 +20,7 @@ RSpec.describe User, type: :model do
   it { is_expected.to validate_presence_of(:password) }
   it { is_expected.to have_secure_password }
   it { is_expected.to validate_length_of(:password).is_at_least(6) }
+
 
   describe "attributes" do
     it "should have name and email attributes" do
